@@ -1,0 +1,12 @@
+{
+"version": 2,
+"builds": [
+{ "src": "app/**/*.ts", "use": "@vercel/node" },
+{ "src": "package.json", "use": "@vercel/next" }
+],
+"env": {
+"NEYNAR_API_KEY": "@neynar_api_key",
+"NEYNAR_CLIENT_ID": "@neynar_client_id",
+"APP_URL": "@app_url"
+}
+}
