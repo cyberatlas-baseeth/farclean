@@ -1,0 +1,7 @@
+{
+  "name": "farclean",
+  "version": "1.0.0",
+  "dependencies": {
+    "@neynar/nodejs-sdk": "^1.35.0"
+  }
+}
