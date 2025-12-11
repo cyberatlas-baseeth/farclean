@@ -1,20 +1,26 @@
-import { FramesResponse } from "frames.js/server";
+import { getFrameHtmlResponse } from "frames.js";
 
 export async function POST(req: Request) {
   const body = await req.json();
   const fid = body?.untrustedData?.fid;
 
   if (!fid) {
-    return FramesResponse({
-      image: `<div>Please open this frame in Warpcast.</div>`,
-      buttons: []
-    });
+    return new Response(
+      getFrameHtmlResponse({
+        image: `<div>Please open this frame in Warpcast.</div>`,
+        buttons: []
+      }),
+      { headers: { "Content-Type": "text/html" } }
+    );
   }
 
-  return FramesResponse({
-    image: `<div>Action completed successfully.</div>`,
-    buttons: [
-      { label: "Home", action: "post", target: "/" }
-    ]
-  });
+  return new Response(
+    getFrameHtmlResponse({
+      image: `<div>Action completed successfully.</div>`,
+      buttons: [
+        { label: "Home", action: "post", target: "/" }
+      ]
+    }),
+    { headers: { "Content-Type": "text/html" } }
+  );
 }
