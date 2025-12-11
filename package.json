@@ -1,22 +1,17 @@
 {
-"name": "farcaster-unfollow-miniapp",
-"version": "0.1.0",
-"private": true,
-"scripts": {
-"dev": "next dev",
-"build": "next build",
-"start": "next start",
-"lint": "next lint"
-},
-"dependencies": {
-"next": "14.3.1",
-"react": "18.2.0",
-"react-dom": "18.2.0",
-"node-fetch": "3.4.1",
-"@farcaster/frame": "^1.0.0",
-"@neynar/nodejs-sdk": "^0.1.0"
-},
-"devDependencies": {
-"typescript": "5.5.6"
-}
+  "name": "farcaster-unfollow-miniapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "15.0.0",
+    "react": "18.3.0",
+    "react-dom": "18.3.0",
+    "@neynar/nodejs-sdk": "latest",
+    "frames.js": "latest"
+  }
 }
